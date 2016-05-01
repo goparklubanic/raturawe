@@ -1,0 +1,28 @@
+<html>
+	<head>
+	  <title>Jajaan ad elemen</title>
+	</head>
+	<body>
+		<button onClick=nambah()>Tambah Menu</button>
+		<script>
+		function nambah()
+		{
+			newField = document.createElement("div");
+			var fmenu = "nama tabel  : <input type='text' size='20' name='menu[]'>&nbsp;";
+			newField.innerHTML=fmenu;
+			
+			theForm = document.getElementById("myForm");
+			theForm.appendChild(newField);
+		}
+		</script>
+		<form action="datashow.php?p=pagescript.php" method="post">
+
+		<div id="myForm">
+		
+		</div>
+		<input type="submit" value="Lihat Skrip">
+		</form>
+		
+	</body>
+
+</html>
